@@ -1,0 +1,36 @@
+# Serve Markdown to AI agents that send `Accept: text/markdown`.
+# See netlify/edge-functions/markdown.ts for testing instructions.
+# Add content paths with extra [[edge_functions]] blocks for "markdown";
+# exclude paths by adding them to `excludedPath`.
+[[edge_functions]]
+function = "markdown"
+path = "/*"
+excludedPath = [
+  "/.netlify/*",
+  "/api/*",
+  "/assets/*",
+  "/static/*",
+  "/images/*",
+  "/img/*",
+  "/fonts/*",
+  "/css/*",
+  "/js/*",
+  "/*.css",
+  "/*.js",
+  "/*.mjs",
+  "/*.map",
+  "/*.json",
+  "/*.xml",
+  "/*.txt",
+  "/*.ico",
+  "/*.png",
+  "/*.jpg",
+  "/*.jpeg",
+  "/*.gif",
+  "/*.svg",
+  "/*.webp",
+  "/*.avif",
+  "/*.woff",
+  "/*.woff2",
+  "/*.pdf",
+]
